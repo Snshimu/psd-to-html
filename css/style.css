@@ -1,0 +1,813 @@
+/*=========================================
+              common css
+===========================================*/
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 72%;
+
+}
+body{
+
+
+
+}
+.container{
+    max-width: 1140rem;
+    width: 100%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+
+
+/*--------------------- grid css-------------------------------*/
+
+
+/*-------  SECTIONS-----*/
+
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*------  GROUPING  --- */
+
+
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+.container {
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP  */
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+/* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+}
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span_2_of_2 {
+    width: 100%;
+}
+
+.span_1_of_2 {
+    width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .span_2_of_2 {
+        width: 100%;
+    }
+
+    .span_1_of_2 {
+        width: 100%;
+    }
+}
+
+  /*----------  GRID OF FOUR ----*/
+
+
+  .span_4_of_4 {
+      width: 100%;
+  }
+
+  .span_3_of_4 {
+      width: 74.6%;
+  }
+
+  .span_2_of_4 {
+      width: 49.2%;
+  }
+
+  .span_1_of_4 {
+      width: 23.8%;
+  }
+
+
+  /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+  @media only screen and (max-width: 480px) {
+      .span_4_of_4 {
+          width: 100%;
+      }
+
+      .span_3_of_4 {
+          width: 100%;
+      }
+
+      .span_2_of_4 {
+          width: 100%;
+      }
+
+      .span_1_of_4 {
+          width: 100%;
+      }
+  }
+
+/*  GRID OF THREE   ============================================================================= */
+
+
+.span_3_of_3 {
+    width: 100%;
+}
+
+.span_2_of_3 {
+    width: 66.13%;
+}
+
+.span_1_of_3 {
+    width: 32.26%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .span_3_of_3 {
+        width: 100%;
+    }
+
+    .span_2_of_3 {
+        width: 100%;
+    }
+
+    .span_1_of_3 {
+        width: 100%;
+    }
+}
+/*=========================================
+        START HEADER SECTION
+===========================================*/
+.header-section{
+    background-image: linear-gradient(rgba(87,101,116,0.8),rgba(87,101,116,0.8)),url(img/bg1.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+/*-----logo-----*/
+.logo{
+    float: left;
+    margin-top: 4rem;
+    margin-left: 8%;
+}
+
+/*--------------------------------------------------------START NAV-----------------------------------------------------------------------*/
+
+ /*----start hamburger-----*/
+.mobile-menu span{
+  color: #f0f0f2;
+  font-size: 2rem;
+  width: 3rem;
+  float: right;
+  margin-right: 8%;
+  margin-top: 4.1rem;
+  border: 2px solid #d2d3d8;
+}
+
+.mobile-menu span:hover{
+    cursor: pointer;
+}
+
+
+.closeBtn {
+    position: absolute;
+    color: #fff;
+    font-size: 4rem;
+    float: right;
+    right: 5%;
+    top: 3%;
+}
+/*----End hamburger-----*/
+
+/*-------start menu------*/
+.overly{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 999;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overly-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+}
+.overly-content a{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    transition: 0.4s;
+}
+.overly-content a:hover{
+     color: tomato;
+}
+/*------end menu------*/
+
+
+
+
+
+/*---------------------------------------------------------------------END NAV--------------------------------------------------------------*/
+
+
+/*-----start header text-----*/
+.header-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 35%;
+}
+.header-content h1{
+
+    color: #ffffff;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+   font-family: 'Raleway',sans-serif;
+   
+}
+
+.header-content p {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-----heading straight line------*/
+h1::after{
+    content: "";
+    display: block;
+    background-color: #98b4be;
+    height: 0.17rem;
+    margin: auto;
+}
+h1::before{
+        content: "";
+        display: block;
+        background-color: #98b4be;
+        height: 0.17rem;
+        margin: auto;
+}
+/*-----End header text-----*/
+
+/*=========================================
+         END HEADER SECTION
+===========================================*/
+
+
+/*=========================================
+         START ABOUT SECTION
+===========================================*/
+.about-section{
+
+    background-color: #ffffff;
+    padding: 5rem 0;
+
+
+
+
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 1rem;
+  
+
+
+
+
+}
+
+.photo{
+  
+  width: 80%;
+
+}
+/*-----about text-----*/
+.about-text{
+   margin-top: 10rem;
+
+}
+
+.about-text h3{
+
+    color: #000000c9;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.about-text p{
+
+    color: #000000c9;
+    width: 90%;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+      font-family: 'Roboto',sans-serif;
+}
+/*-----btn-----*/
+.btn{
+
+    background-color: #ff2b4a;
+    padding: 1.5rem 4rem;
+    color: #ffffffc4;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: 'Roboto',sans-serif;
+    
+}
+
+/*=========================================
+         END ABOUT SECTION
+===========================================*/
+
+
+/*=========================================
+         START SKILL SECTION
+===========================================*/
+
+
+
+
+.skill-section{
+
+    padding: 5rem 0;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+.skill-section h2{
+
+    color: #000000bb;
+    margin-bottom: 0.7rem;
+    font-family: 'Raleway',sans-serif;
+    font-size: 3rem;
+}
+.skill-section p{
+
+    color: #000000bb;
+    font-size: 1.6rem;
+    font-family: 'Raleway',sans-serif;
+    
+}
+.skill-card{
+
+    padding: 2rem 7rem;
+}
+.card{
+
+
+    background-color: #10c6fc;
+    text-align: center;
+    padding: 5rem 0;
+    transition: 0.1s;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+
+
+}
+.card h3{
+
+    margin-top: 0.9rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: normal;
+   
+}
+.card i{
+
+    font-size: 3rem;
+    color: #ffffff;
+    
+}
+.c-1{
+    background-color: #835aeb;
+
+}
+.c-2{
+    background-color: #002453;
+
+}
+.c-3 {
+    background-color: #ff2b4a;
+
+}
+.card:hover{
+
+    background-color: rgba(0, 0, 0, 0.265);
+    transform: scale(1.1);
+    box-shadow: 2px 6px 5px black;
+}
+/*=========================================
+         end skill SECTION
+===========================================*/
+/*=========================================
+         end skill SECTION
+===========================================*/
+
+ .experoence-section{
+
+    background-color: #2c6879;
+    padding: 5rem 0;
+
+
+
+
+
+ }
+
+ .work-exp {
+  
+
+    padding: 1rem 10rem;
+
+
+ }
+
+.exp-card{
+
+    background-color: #55657d;
+    padding: 4rem 2rem;
+    margin-left: 1rem;
+    
+    
+    
+
+
+
+
+}
+
+.experoence-section h3{
+
+    color: #ffffffcb;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.1rem;
+
+    
+}
+
+.experoence-section h4 {
+
+    color: #ffffffcb;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+
+
+
+}
+
+.time{
+
+
+    color: #ffffffaa;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+    font-family:'Roboto',sans-serif;
+
+}
+
+.description{
+
+    color: #ffffffcb;
+    font-size: 1rem;
+    font-family:'Roboto',sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+    
+}
+
+/*=========================================
+         end skill SECTION
+===========================================*/
+
+.gallery-section{
+
+    padding: 5rem 0;
+    text-align: center;
+}
+.gallery-section h2 {
+
+        color: #000000bb;
+        margin-bottom: 0.7rem;
+        font-family: 'Raleway',sans-serif;
+        font-size: 3rem;
+}
+
+.gallery-section p{
+        color: #000000bb;
+        font-size: 1.6rem;
+        font-family: 'Raleway',
+        sans-serif;
+
+}
+
+.gallery{
+
+    width:100%;
+    margin-left: 1.5rem;
+    border: 1px solid #393939;
+    height: 20rem;
+    transition: 0.5s;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.myPhoto{
+
+    padding: 1rem 3rem;
+}
+
+.gallery:hover{
+
+    transform: scale(1.3);
+}
+/*=========================================
+         end skill SECTION
+===========================================*/
+.client-quote-section{
+
+    
+    background-color: #64cbc0;
+    padding: 5rem;
+
+}
+.box{
+    padding: 1rem 10rem;
+}
+.client-quote-section p{
+
+    width: 70%;
+    margin-top: 7rem;
+}
+
+.client-quote-section .signature{
+    width: 13rem;
+    margin-top: 3rem;
+    display: inline-block;
+}
+.client-quote-section h4{
+
+    color: #1e3d39;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem; 
+      font-family:'Roboto', sans-serif;
+      font-size: 1.3rem;
+    
+}
+.client-quote-section .title{
+
+    margin: 0;
+    letter-spacing:0.2rem;
+    font-size:1rem ;
+    margin-top: 0.3rem;
+    color: #1e3d39;
+    text-transform: capitalize;
+}
+.comment{
+
+    margin-top: 8rem;
+    
+
+}
+.client-quote-section .client-img{
+    margin-left: 2rem;
+}
+
+/*=========================================
+         end skill SECTION
+===========================================*/
+
+
+/*=========================================
+         end skill SECTION
+===========================================*/
+
+
+
+
+
+
+.contact-section{
+
+
+    padding: 5rem 6rem;
+    background-color: #736a77;
+
+
+
+
+
+}
+
+
+
+.message-part{
+
+    background-color: #4d637d;
+    height: 35rem;
+    padding: 2rem 3rem;
+
+
+
+}
+.message-part h2{
+
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Raleway',
+       sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+    
+
+    
+}
+input[type="name"],
+input[type="mail"],
+input[type="subject"],
+textarea {
+    border: 0;
+    outline: none;
+    background-color: #4d637d;
+    width: 100%;
+    color: #ffffff;
+    border: 1px solid #ffffffba;
+    background-position: center-top;
+
+
+}
+textarea {
+    margin-top: 1rem;
+    padding: 0.3rem 0.7rem;
+    resize: none;
+
+}
+.message-part .btn{
+
+
+    text-align: center;
+    float: right;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+
+
+}
+
+.address-part {
+
+    background-color: #4d637d;
+    display: block;
+    height: 35rem;
+    
+
+
+   
+    
+}
+
+.address{
+
+    background-color: #66637b;
+     width: 85%;
+     height: 25%;
+     margin:0 3rem;
+     margin-top: 3rem;
+     padding:1rem 2rem;
+
+
+}
+
+
+.phone {
+    background-color: #66637b;
+    width: 85%;
+    height: 25%;
+    margin:1.5rem 3rem;
+    padding:1rem 2rem;
+}
+
+.web{
+
+    background-color: #66637b;
+    width: 85%;
+    height: 25%;
+    margin:1.5rem 3rem;
+    padding:1rem 2rem;
+}
+.address-part h2{
+   color: #fff;
+   text-transform: uppercase;
+   font-family: 'Raleway',
+   sans-serif;
+   margin-bottom: 0.5rem;
+   letter-spacing: 0.2rem;
+
+}
+.text{
+    color: #ffffffad;
+    font-size: 1.1rem;
+     font-family:'Roboto', sans-serif;
+}
+
+
+
+/*=========================================
+         end skill SECTION
+===========================================*/
+
+footer{
+
+    padding: 5rem 0;
+    background-color: #222222;
+    text-align: center;
+}
+footer i{
+
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: #a1a1a1;
+    margin-bottom:1rem ;
+}
+
+footer .active {
+    color: #ff2b4a;
+
+}
+
+
+
+footer i:hover{
+    color:#ff2b4a;
+    
+}
+
+footer p{
+
+    color: #ffffffe0;
+    font-size: 1rem;
+     font-family:'Roboto',
+     sans-serif;
+     letter-spacing: 0.2rem;
+}
